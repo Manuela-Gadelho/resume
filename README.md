@@ -9,7 +9,7 @@ Feel free to explore my projects and get in touch if you have any questions or c
 Contact Me
 \
 I am actively seeking opportunities to grow and learn in a dynamic environment. If you are interested in collaborating or have a position available that aligns with my skills and aspirations, please don't hesitate to reach out. I am looking forward to connecting with you!
-\
+\\
 Email: manugadelho@protonmail.com 
 LinkedIn: https://www.linkedin.com/in/manuela-moreira-gadelho
 GitHub: https://github.com/Manuela-Gadelho

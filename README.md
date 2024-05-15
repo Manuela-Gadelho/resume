@@ -19,4 +19,5 @@ GitHub: https://github.com/Manuela-Gadelho
 \
 Thank you for visiting my portfolio!
 \
+\
 ![image](https://github.com/Manuela-Gadelho/resume/assets/91551542/e183b79e-0a85-4cf7-9d99-a170ae52c7ab)

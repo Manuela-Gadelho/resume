@@ -9,27 +9,25 @@ $receiving_email_address = 'manugadelho@protonmail.com';
 if (file_exists($php_email_form)) {
     include($php_email_form);
 
+    // Cria uma instância do PHP_Email_Form
     $contact = new PHP_Email_Form;
     $contact->ajax = true;
 
     $contact->to = $receiving_email_address;
-    $contact->from_name = $_POST['name'] ?? '';
-    $contact->from_email = $_POST['email'] ?? '';
-    $contact->subject = $_POST['subject'] ?? '';
+    
+    // Verifica se os dados de entrada estão presentes e não vazios
+    $name = $_POST['name'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $subject = $_POST['subject'] ?? '';
+    $message = $_POST['message'] ?? '';
 
-    // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-    /*
-    $contact->smtp = array(
-        'host' => 'example.com',
-        'username' => 'example',
-        'password' => 'pass',
-        'port' => '587'
-    );
-    */
-
-    $contact->add_message($_POST['name'] ?? '', 'From');
-    $contact->add_message($_POST['email'] ?? '', 'Email');
-    $contact->add_message($_POST['message'] ?? '', 'Message', 10);
+    // Adiciona os dados de entrada à mensagem
+    $contact->from_name = $name;
+    $contact->from_email = $email;
+    $contact->subject = $subject;
+    $contact->add_message($name, 'From');
+    $contact->add_message($email, 'Email');
+    $contact->add_message($message, 'Message', 10);
 
     // Tenta enviar o email e imprime o resultado
     if ($contact->send()) {
